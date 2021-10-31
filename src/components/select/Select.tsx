@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import s from './Select.module.css'
 
 type ItemType = {
@@ -10,6 +10,8 @@ type SelectPropsType = {
   onChange: (value: any) => void
   value: any
 }
+
+export const SelectMemo = React.memo(Select)
 
 export function Select(props: SelectPropsType) {
   let [active, setActive] = useState(true)
